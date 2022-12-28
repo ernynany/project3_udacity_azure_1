@@ -87,15 +87,15 @@ stages:
           - task: ArchiveFiles@2
             displayName: Archive Fakerestapi
             inputs:
-              rootFolderOrFile: '$(System.DefaultWorkingDirectory)/fakerestapi'
+              rootFolderOrFile: '$(System.DefaultWorkingDirectory)/automatedtesting/jmeter/fakerestapi/'
               includeRootFolder: false
               archiveType: 'zip'
-              archiveFile: '$(Build.ArtifactStagingDirectory)/fakerestapi-$(Build.BuildId).zip'
+              archiveFile: '$(Build.ArtifactStagingDirectory)/automatedtesting/jmeter/fakerestapi/-$(Build.BuildId).zip'
           
           - task: PublishPipelineArtifact@1
             displayName: Publish Fakerestapi as Artifact
             inputs:
-              targetPath: '$(Build.ArtifactStagingDirectory)/fakerestapi-$(Build.BuildId).zip'
+              targetPath: '$(Build.ArtifactStagingDirectory)/automatedtesting/jmeter/fakerestapi-$(Build.BuildId).zip'
               artifactName: 'drop-fakerestapi'
               
           - task: ArchiveFiles@2
