@@ -1,0 +1,373 @@
+nosa-ubuntu@DESKTOP-ND8EM2D:/mnt/e/00_all_labs_codes/Udacity_Azure_Devops/project3_udacity_azure/terraform/environments/test$ terraform plan
+Acquiring state lock. This may take a few moments...
+data.azurerm_resource_group.test: Reading...
+data.azurerm_resource_group.test: Read complete after 1s [id=/subscriptions/3f8e074e-7d07-4990-8a18-bb4023ba8f4c/resourceGroups/project3_quality_release]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.appservice.azurerm_app_service.test will be created        
+  + resource "azurerm_app_service" "test" {
+      + app_service_plan_id               = (known after apply)       
+      + app_settings                      = {
+          + "WEBSITE_RUN_FROM_PACKAGE" = "0"
+        }
+      + client_affinity_enabled           = false
+      + client_cert_enabled               = false
+      + client_cert_mode                  = (known after apply)       
+      + custom_domain_verification_id     = (known after apply)       
+      + default_site_hostname             = (known after apply)       
+      + enabled                           = true
+      + https_only                        = false
+      + id                                = (known after apply)       
+      + key_vault_reference_identity_id   = (known after apply)       
+      + location                          = "westus"
+      + name                              = "myApplication-AppService"
+      + outbound_ip_address_list          = (known after apply)       
+      + outbound_ip_addresses             = (known after apply)       
+      + possible_outbound_ip_address_list = (known after apply)       
+      + possible_outbound_ip_addresses    = (known after apply)       
+      + resource_group_name               = "project3_quality_release"
+      + site_credential                   = (known after apply)       
+
+      + auth_settings {
+          + additional_login_params        = (known after apply)
+          + allowed_external_redirect_urls = (known after apply)
+          + default_provider               = (known after apply)
+          + enabled                        = (known after apply)
+          + issuer                         = (known after apply)
+          + runtime_version                = (known after apply)
+          + token_refresh_extension_hours  = (known after apply)
+          + token_store_enabled            = (known after apply)
+          + unauthenticated_client_action  = (known after apply)
+
+          + active_directory {
+              + allowed_audiences = (known after apply)
+              + client_id         = (known after apply)
+              + client_secret     = (sensitive value)
+            }
+
+          + facebook {
+              + app_id       = (known after apply)
+              + app_secret   = (sensitive value)
+              + oauth_scopes = (known after apply)
+            }
+
+          + google {
+              + client_id     = (known after apply)
+              + client_secret = (sensitive value)
+              + oauth_scopes  = (known after apply)
+            }
+
+          + microsoft {
+              + client_id     = (known after apply)
+              + client_secret = (sensitive value)
+              + oauth_scopes  = (known after apply)
+            }
+
+          + twitter {
+              + consumer_key    = (known after apply)
+              + consumer_secret = (sensitive value)
+            }
+        }
+
+      + connection_string {
+          + name  = (known after apply)
+          + type  = (known after apply)
+          + value = (sensitive value)
+        }
+
+      + logs {
+          + detailed_error_messages_enabled = (known after apply)
+          + failed_request_tracing_enabled  = (known after apply)
+
+          + application_logs {
+              + file_system_level = (known after apply)
+
+              + azure_blob_storage {
+                  + level             = (known after apply)
+                  + retention_in_days = (known after apply)
+                  + sas_url           = (sensitive value)
+                }
+            }
+
+          + http_logs {
+              + azure_blob_storage {
+                  + retention_in_days = (known after apply)
+                  + sas_url           = (sensitive value)
+                }
+
+              + file_system {
+                  + retention_in_days = (known after apply)
+                  + retention_in_mb   = (known after apply)
+                }
+            }
+        }
+
+      + site_config {
+          + acr_use_managed_identity_credentials = (known after apply)
+          + acr_user_managed_identity_client_id  = (known after apply)
+          + always_on                            = (known after apply)
+          + app_command_line                     = (known after apply)
+          + auto_swap_slot_name                  = (known after apply)
+          + default_documents                    = (known after apply)
+          + dotnet_framework_version             = (known after apply)
+          + ftps_state                           = (known after apply)
+          + health_check_path                    = (known after apply)
+          + http2_enabled                        = (known after apply)
+          + ip_restriction                       = (known after apply)
+          + java_container                       = (known after apply)
+          + java_container_version               = (known after apply)
+          + java_version                         = (known after apply)
+          + linux_fx_version                     = (known after apply)
+          + local_mysql_enabled                  = (known after apply)
+          + managed_pipeline_mode                = (known after apply)
+          + min_tls_version                      = (known after apply)
+          + number_of_workers                    = (known after apply)
+          + php_version                          = (known after apply)
+          + python_version                       = (known after apply)
+          + remote_debugging_enabled             = (known after apply)
+          + remote_debugging_version             = (known after apply)
+          + scm_ip_restriction                   = (known after apply)
+          + scm_type                             = (known after apply)
+          + scm_use_main_ip_restriction          = (known after apply)
+          + use_32_bit_worker_process            = (known after apply)
+          + vnet_route_all_enabled               = (known after apply)
+          + websockets_enabled                   = (known after apply)
+          + windows_fx_version                   = (known after apply)
+
+          + cors {
+              + allowed_origins     = (known after apply)
+              + support_credentials = (known after apply)
+            }
+        }
+
+      + source_control {
+          + branch             = (known after apply)
+          + manual_integration = (known after apply)
+          + repo_url           = (known after apply)
+          + rollback_enabled   = (known after apply)
+          + use_mercurial      = (known after apply)
+        }
+
+      + storage_account {
+          + access_key   = (sensitive value)
+          + account_name = (known after apply)
+          + mount_path   = (known after apply)
+          + name         = (known after apply)
+          + share_name   = (known after apply)
+          + type         = (known after apply)
+        }
+    }
+
+  # module.appservice.azurerm_app_service_plan.test will be created
+  + resource "azurerm_app_service_plan" "test" {
+      + id                           = (known after apply)
+      + kind                         = "Windows"
+      + location                     = "westus"
+      + maximum_elastic_worker_count = (known after apply)
+      + maximum_number_of_workers    = (known after apply)
+      + name                         = "myApplication-AppService"
+      + resource_group_name          = "project3_quality_release"
+
+      + sku {
+          + capacity = (known after apply)
+          + size     = "F1"
+          + tier     = "Free"
+        }
+    }
+
+  # module.network.azurerm_subnet.test will be created
+  + resource "azurerm_subnet" "test" {
+      + address_prefixes                               = [
+          + "10.5.1.0/24",
+        ]
+      + enforce_private_link_endpoint_network_policies = (known after apply)
+      + enforce_private_link_service_network_policies  = (known after apply)
+      + id                                             = (known after apply)
+      + name                                           = "myApplication-NET-sub"
+      + private_endpoint_network_policies_enabled      = (known after apply)
+      + private_link_service_network_policies_enabled  = (known after apply)
+      + resource_group_name                            = "project3_quality_release"
+      + virtual_network_name                           = "myApplication-NET"
+    }
+
+  # module.network.azurerm_virtual_network.test will be created
+  + resource "azurerm_virtual_network" "test" {
+      + address_space       = [
+          + "10.5.0.0/16",
+        ]
+      + dns_servers         = (known after apply)
+      + guid                = (known after apply)
+      + id                  = (known after apply)
+      + location            = "westus"
+      + name                = "myApplication-NET"
+      + resource_group_name = "project3_quality_release"
+      + subnet              = (known after apply)
+    }
+
+  # module.nsg-test.azurerm_network_security_group.nsg will be created
+  + resource "azurerm_network_security_group" "nsg" {
+      + id                  = (known after apply)
+      + location            = "westus"
+      + name                = "myApplication-NSG"
+      + resource_group_name = "project3_quality_release"
+      + security_rule       = [
+          + {
+              + access                                     = "Allow"
+              + description                                = ""
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "22"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "SSH"
+              + priority                                   = 1001
+              + protocol                                   = "Tcp"
+              + source_address_prefix                      = "*"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = ""
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "5000"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "myApplication-NSG-5000"
+              + priority                                   = 100
+              + protocol                                   = "Tcp"
+              + source_address_prefix                      = "10.5.1.0/24"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+        ]
+    }
+
+  # module.nsg-test.azurerm_subnet_network_security_group_association.test will be created
+  + resource "azurerm_subnet_network_security_group_association" "test" {
+      + id                        = (known after apply)
+      + network_security_group_id = (known after apply)
+      + subnet_id                 = (known after apply)
+    }
+
+  # module.publicip.azurerm_public_ip.test will be created
+  + resource "azurerm_public_ip" "test" {
+      + allocation_method       = "Dynamic"
+      + ddos_protection_mode    = "VirtualNetworkInherited"
+      + fqdn                    = (known after apply)
+      + id                      = (known after apply)
+      + idle_timeout_in_minutes = 4
+      + ip_address              = (known after apply)
+      + ip_version              = "IPv4"
+      + location                = "westus"
+      + name                    = "myApplication-publicip-pubip"
+      + resource_group_name     = "project3_quality_release"
+      + sku                     = "Basic"
+      + sku_tier                = "Regional"
+    }
+
+  # module.vm.azurerm_linux_virtual_machine.test will be created
+  + resource "azurerm_linux_virtual_machine" "test" {
+      + admin_username                  = "nosa"
+      + allow_extension_operations      = true
+      + computer_name                   = (known after apply)
+      + disable_password_authentication = true
+      + extensions_time_budget          = "PT1H30M"
+      + id                              = (known after apply)
+      + location                        = "westus"
+      + max_bid_price                   = -1
+      + name                            = "myApplication-VM"
+      + network_interface_ids           = (known after apply)
+      + patch_assessment_mode           = "ImageDefault"
+      + patch_mode                      = "ImageDefault"
+      + platform_fault_domain           = -1
+      + priority                        = "Regular"
+      + private_ip_address              = (known after apply)
+      + private_ip_addresses            = (known after apply)
+      + provision_vm_agent              = true
+      + public_ip_address               = (known after apply)
+      + public_ip_addresses             = (known after apply)
+      + resource_group_name             = "project3_quality_release"
+      + size                            = "Standard_B2s"
+      + virtual_machine_id              = (known after apply)
+
+      + admin_ssh_key {
+          + public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDZRVO+luCt9AtNahIt6pzXqL9YZmjkeJDnzMN2KDV1kKa1Uhm1MDhnX9wMIAqyZQ9iTEA2GuLd7NgdwMAyWXsX3PQghsgYibsnKNthCntG+3LdrIE6akNG2X2mrWWNLtYyIKKpfT8hu9c71awjOAWBAB03QxiTw7QBT2eaIXSI9bvqvERTDWUBgGmPBb/bjjFb+IsHigNm+RH0zx7WF5nwTznm29fCcKaj+kqkFUsNGrGjAe1o1qXzKVASjW+URMoZbnz18YXb8geAL3GK7/o7E0cAVyNbzJwPlGN6/+9lIddKxz1wCQc3C36r/X8jMSywklxjLU5B+sBi/2Zu2BmsruBz3M9JLuFW/IXrpuBOeieg+OkTWUc8y5fKaqgtFkC8celDCFdI1tnk/f96uxV4msUZhfyekMhAF9y514TBIb+kC2mJKSvAhWJ+fKUAhg1E6mDg2+X1MtbEt6zYSJMuaFlSjbeY8LfPqC35nbc+2cu9Uvizc8049AbzvEvEDV8= nosa-ubuntu@DESKTOP-ND8EM2D"
+          + username   = "nosa"
+        }
+
+      + os_disk {
+          + caching                   = "ReadWrite"
+          + disk_size_gb              = (known after apply)
+          + name                      = (known after apply)
+          + storage_account_type      = "Standard_LRS"
+          + write_accelerator_enabled = false
+        }
+
+      + source_image_reference {
+          + offer     = "UbuntuServer"
+          + publisher = "Canonical"
+          + sku       = "20.04-LTS"
+          + version   = "latest"
+        }
+
+      + termination_notification {
+          + enabled = (known after apply)
+          + timeout = (known after apply)
+        }
+    }
+
+  # module.vm.azurerm_network_interface.test will be created
+  + resource "azurerm_network_interface" "test" {
+      + applied_dns_servers           = (known after apply)
+      + dns_servers                   = (known after apply)
+      + enable_accelerated_networking = false
+      + enable_ip_forwarding          = false
+      + id                            = (known after apply)
+      + internal_dns_name_label       = (known after apply)
+      + internal_domain_name_suffix   = (known after apply)
+      + location                      = "westus"
+      + mac_address                   = (known after apply)
+      + name                          = "myApplication-VM"
+      + private_ip_address            = (known after apply)
+      + private_ip_addresses          = (known after apply)
+      + resource_group_name           = "project3_quality_release"
+      + virtual_machine_id            = (known after apply)
+
+      + ip_configuration {
+          + gateway_load_balancer_frontend_ip_configuration_id = (known after apply)
+          + name                                               = "internal"
+          + primary                                            = (known after apply)
+          + private_ip_address                                 = (known after apply)
+          + private_ip_address_allocation                      = "Dynamic"
+          + private_ip_address_version                         = "IPv4"
+          + public_ip_address_id                               = (known after apply)
+          + subnet_id                                          = (known after apply)
+        }
+    }
+
+Plan: 9 to add, 0 to change, 0 to destroy.
+╷
+│ Warning: Deprecated Resource
+│
+│   with module.appservice.azurerm_app_service_plan.test,
+│   on ../../modules/appservice/appservice.tf line 1, in resource "azurerm_app_service_plan" "test":
+│    1: resource "azurerm_app_service_plan" "test" {
+│
+│ The `azurerm_app_service_plan` resource has been superseded by the `azurerm_service_plan` resource. Whilst this resource will continue to be available in the 2.x and 3.x releases it is
+│ feature-frozen for compatibility purposes, will no longer receive any updates and will be removed in a future major release of the Azure Provider.
+│
+│ (and 3 more similar warnings elsewhere)
+╵
+
