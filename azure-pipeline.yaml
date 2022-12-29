@@ -128,8 +128,8 @@ stages:
                   azureSubscription: 'Azure-project3_1-service'
                   appType: 'webApp'
                   WebAppName: 'project3Application-AppService'
-                  packageForLinux: '$(Pipeline.Workspace)/drop-fakerestapi/automatedtesting/jmeter/fakerestapi/-$(Build.BuildId).zip'
-                  #packageForLinux:  '$(Build.ArtifactStagingDirectory)/automatedtesting/jmeter/fakerestapi/-$(Build.BuildId).zip'
+                  packageForLinux: '$(Pipeline.Workspace)/automatedtesting/jmeter/fakerestapi/-$(Build.BuildId).zip'
+                  #packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
                   DeploymentType: zipDeploy 
 
       - deployment: VMDeploy
