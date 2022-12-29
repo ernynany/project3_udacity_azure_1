@@ -1,0 +1,91 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1664232323917,1199,Get Users,200,OK,stress 1-1,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,1199,0,985
+1664232325117,208,Delete User,200,OK,stress 1-1,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,208,0,0
+1664232325326,223,Get User by ID,200,OK,stress 1-1,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,223,0,0
+1664232325909,864,Get Users,200,OK,stress 1-2,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,864,0,643
+1664232326774,211,Delete User,200,OK,stress 1-2,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,211,0,0
+1664232326986,217,Get User by ID,200,OK,stress 1-2,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,217,0,0
+1664232327910,854,Get Users,200,OK,stress 1-3,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,854,0,634
+1664232328765,213,Delete User,200,OK,stress 1-3,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,213,0,0
+1664232328979,215,Get User by ID,200,OK,stress 1-3,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,215,0,0
+1664232329909,874,Get Users,200,OK,stress 1-4,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,874,0,645
+1664232330783,226,Delete User,200,OK,stress 1-4,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,226,0,0
+1664232331009,217,Get User by ID,200,OK,stress 1-4,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,217,0,0
+1664232331910,886,Get Users,200,OK,stress 1-5,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,886,0,664
+1664232332796,210,Delete User,200,OK,stress 1-5,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,210,0,0
+1664232333007,219,Get User by ID,200,OK,stress 1-5,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,219,0,0
+1664232333912,883,Get Users,200,OK,stress 1-6,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,883,0,653
+1664232334796,214,Delete User,200,OK,stress 1-6,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,214,0,0
+1664232335011,216,Get User by ID,200,OK,stress 1-6,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,216,0,0
+1664232335911,844,Get Users,200,OK,stress 1-7,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,844,0,641
+1664232336756,213,Delete User,200,OK,stress 1-7,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,213,0,0
+1664232336970,216,Get User by ID,200,OK,stress 1-7,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,216,0,0
+1664232337910,865,Get Users,200,OK,stress 1-8,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,865,0,639
+1664232338777,220,Delete User,200,OK,stress 1-8,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,220,0,0
+1664232338997,217,Get User by ID,200,OK,stress 1-8,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,217,0,0
+1664232339912,898,Get Users,200,OK,stress 1-9,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,898,0,659
+1664232340810,206,Delete User,200,OK,stress 1-9,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,206,0,0
+1664232341017,222,Get User by ID,200,OK,stress 1-9,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,222,0,0
+1664232341912,918,Get Users,200,OK,stress 1-10,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,918,0,685
+1664232342830,228,Delete User,200,OK,stress 1-10,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,228,0,0
+1664232343058,221,Get User by ID,200,OK,stress 1-10,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,221,0,0
+1664232343913,856,Get Users,200,OK,stress 1-11,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,856,0,631
+1664232344769,223,Delete User,200,OK,stress 1-11,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,223,0,0
+1664232344993,215,Get User by ID,200,OK,stress 1-11,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,215,0,0
+1664232345895,859,Get Users,200,OK,stress 1-12,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,859,0,639
+1664232346755,219,Delete User,200,OK,stress 1-12,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,219,0,0
+1664232346975,213,Get User by ID,200,OK,stress 1-12,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,213,0,0
+1664232347896,851,Get Users,200,OK,stress 1-13,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,851,0,643
+1664232348748,211,Delete User,200,OK,stress 1-13,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,211,0,0
+1664232348960,217,Get User by ID,200,OK,stress 1-13,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,217,0,0
+1664232349895,869,Get Users,200,OK,stress 1-14,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,869,0,657
+1664232350765,212,Delete User,200,OK,stress 1-14,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,212,0,0
+1664232350977,209,Get User by ID,200,OK,stress 1-14,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,209,0,0
+1664232351896,933,Get Users,200,OK,stress 1-15,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,933,0,713
+1664232352829,217,Delete User,200,OK,stress 1-15,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,217,0,0
+1664232353046,223,Get User by ID,200,OK,stress 1-15,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,223,0,0
+1664232353897,1292,Get Users,200,OK,stress 1-16,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,1292,0,645
+1664232355190,216,Delete User,200,OK,stress 1-16,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,216,0,0
+1664232355406,210,Get User by ID,200,OK,stress 1-16,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,210,0,0
+1664232355912,1115,Get Users,200,OK,stress 1-17,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,1115,0,900
+1664232357027,219,Delete User,200,OK,stress 1-17,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,219,0,0
+1664232357246,204,Get User by ID,200,OK,stress 1-17,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,204,0,0
+1664232357910,836,Get Users,200,OK,stress 1-18,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,835,0,632
+1664232358746,221,Delete User,200,OK,stress 1-18,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,221,0,0
+1664232358968,219,Get User by ID,200,OK,stress 1-18,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,218,0,0
+1664232359911,843,Get Users,200,OK,stress 1-19,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,843,0,630
+1664232360755,223,Delete User,200,OK,stress 1-19,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,223,0,0
+1664232360979,216,Get User by ID,200,OK,stress 1-19,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,216,0,0
+1664232361910,861,Get Users,200,OK,stress 1-20,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,860,0,646
+1664232362771,202,Delete User,200,OK,stress 1-20,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,202,0,0
+1664232362974,218,Get User by ID,200,OK,stress 1-20,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,218,0,0
+1664232363921,923,Get Users,200,OK,stress 1-21,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,923,0,699
+1664232364845,219,Delete User,200,OK,stress 1-21,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,219,0,0
+1664232365065,218,Get User by ID,200,OK,stress 1-21,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,218,0,0
+1664232365909,898,Get Users,200,OK,stress 1-22,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,898,0,672
+1664232366808,219,Delete User,200,OK,stress 1-22,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,219,0,0
+1664232367028,206,Get User by ID,200,OK,stress 1-22,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,206,0,0
+1664232367910,860,Get Users,200,OK,stress 1-23,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,859,0,643
+1664232368770,214,Delete User,200,OK,stress 1-23,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,214,0,0
+1664232368985,221,Get User by ID,200,OK,stress 1-23,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,221,0,0
+1664232369910,886,Get Users,200,OK,stress 1-24,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,886,0,654
+1664232370797,218,Delete User,200,OK,stress 1-24,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,218,0,0
+1664232371016,220,Get User by ID,200,OK,stress 1-24,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,220,0,0
+1664232371910,922,Get Users,200,OK,stress 1-25,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,922,0,716
+1664232372833,210,Delete User,200,OK,stress 1-25,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,210,0,0
+1664232373044,197,Get User by ID,200,OK,stress 1-25,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,197,0,0
+1664232373913,862,Get Users,200,OK,stress 1-26,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,862,0,642
+1664232374776,203,Delete User,200,OK,stress 1-26,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,203,0,0
+1664232374980,215,Get User by ID,200,OK,stress 1-26,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/2,215,0,0
+1664232375902,849,Get Users,200,OK,stress 1-27,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,849,0,634
+1664232376752,220,Delete User,200,OK,stress 1-27,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,220,0,0
+1664232376973,229,Get User by ID,200,OK,stress 1-27,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/4,229,0,0
+1664232377895,869,Get Users,200,OK,stress 1-28,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,869,0,648
+1664232378765,221,Delete User,200,OK,stress 1-28,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,221,0,0
+1664232378986,219,Get User by ID,200,OK,stress 1-28,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/6,219,0,0
+1664232379911,845,Get Users,200,OK,stress 1-29,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,845,0,637
+1664232380756,221,Delete User,200,OK,stress 1-29,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,221,0,0
+1664232380977,211,Get User by ID,200,OK,stress 1-29,text,true,,310,156,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/8,210,0,0
+1664232381912,900,Get Users,200,OK,stress 1-30,text,true,,784,154,1,1,https://project3demo-appservice.azurewebsites.net/api/Users,900,0,672
+1664232382813,213,Delete User,200,OK,stress 1-30,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,213,0,0
+1664232383026,219,Get User by ID,200,OK,stress 1-30,text,true,,313,157,1,1,https://project3demo-appservice.azurewebsites.net/api/Users/10,219,0,0
