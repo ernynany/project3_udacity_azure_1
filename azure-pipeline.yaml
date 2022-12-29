@@ -15,16 +15,16 @@ stages:
           vmImage: 'ubuntu-latest'
         steps:
         - task: DownloadSecureFile@1
-          displayName: Download secret.conf file
+          displayName: Download azsecret.conf file
           name: azsecret
           inputs:
-            secureFile: 'secret.conf'
+            secureFile: 'azsecret.conf'
         - task: InstallSSHKey@0
           displayName: Install SSH Key
           inputs:
             knownHostsEntry: 'known_hosts'
             sshPublicKey: '$(public_key)'
-            sshKeySecureFile: 'id_rsa'
+            sshKeySecureFile: 'az_eqr_id_rsa'
         - task: TerraformInstaller@0
           displayName: Install Terraform
           inputs:
@@ -33,12 +33,12 @@ stages:
           displayName: Terraform Init
           inputs:
             command: 'init'
-            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environment/test'
             commandOptions: '-backend-config=$(azsecret.secureFilePath)'
             backendType: 'azurerm'
-            backendServiceArm: 'Azure-project3_1-service'
+            backendServiceArm: 'service-connection-azurerm'
             backendAzureRmResourceGroupName: 'tfstate'
-            backendAzureRmStorageAccountName: 'tfstate29341'
+            backendAzureRmStorageAccountName: 'tfstate17297'
             backendAzureRmContainerName: 'tfstate'
             allowTelemetryCollection: true
           
@@ -51,9 +51,9 @@ stages:
         - task: AzureCLI@1
           displayName: Set Environment Variables for Terraform
           inputs:
-            azureSubscription: Azure-project3_1-service
+            azureSubscription: service-connection-azurerm
             scriptLocation: inlineScript
-            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environment/test'
             addSpnToEnvironment: true
             inlineScript: |
                 export ARM_CLIENT_ID=$(client_id)
@@ -65,16 +65,16 @@ stages:
           displayName: 'Terraform Plan'
           inputs:        
               command: 'plan'
-              environmentServiceName: 'Azure-project3_1-service'
+              environmentServiceName: 'service-connection-azurerm'
               allowTelemetryCollection: true
-              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environment/test'
               
         - task: TerraformCLI@0
           displayName: Terraform Apply
           inputs:
             command: 'apply'
-            environmentServiceName: 'Azure-project3_1-service'
-            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
+            environmentServiceName: 'service-connection-azurerm'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environment/test'
             allowTelemetryCollection: true
 
   - stage: Build
@@ -87,15 +87,15 @@ stages:
           - task: ArchiveFiles@2
             displayName: Archive Fakerestapi
             inputs:
-              rootFolderOrFile: '$(System.DefaultWorkingDirectory)/automatedtesting/jmeter/fakerestapi/'
+              rootFolderOrFile: '$(System.DefaultWorkingDirectory)/fakerestapi'
               includeRootFolder: false
               archiveType: 'zip'
-              archiveFile: '$(Build.ArtifactStagingDirectory)/automatedtesting/jmeter/fakerestapi/-$(Build.BuildId).zip'
+              archiveFile: '$(Build.ArtifactStagingDirectory)/fakerestapi-$(Build.BuildId).zip'
           
           - task: PublishPipelineArtifact@1
             displayName: Publish Fakerestapi as Artifact
             inputs:
-              targetPath: '$(Build.ArtifactStagingDirectory)/automatedtesting/jmeter/fakerestapi/-$(Build.BuildId).zip'
+              targetPath: '$(Build.ArtifactStagingDirectory)/fakerestapi-$(Build.BuildId).zip'
               artifactName: 'drop-fakerestapi'
               
           - task: ArchiveFiles@2
@@ -125,11 +125,10 @@ stages:
               - task: AzureRmWebAppDeployment@4
                 inputs:
                   ConnectionType: 'AzureRM'
-                  azureSubscription: 'Azure-project3_1-service'
+                  azureSubscription: 'service-connection-azurerm'
                   appType: 'webApp'
-                  WebAppName: 'project3Application-AppService'
-                  #packageForLinux: '$(Pipeline.Workspace)/automatedtesting/jmeter/fakerestapi/-$(Build.BuildId).zip'
-                  packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+                  WebAppName: 'project3demo-AppService'
+                  packageForLinux: '$(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip'
                   DeploymentType: zipDeploy 
 
       - deployment: VMDeploy
