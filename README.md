@@ -1,18 +1,11 @@
 # Ensuring Quality Releases
 Udacity's DevOps on Azure platform ---> Project 3
 
-## Status
 
 ### Introduction 
 The aim of the project --> is to use some industry leading tools including Microsoft Azure DevOps and Infrastructure as Code Tools like Terraform to create a disposable test environment and run a variety of automated tests with the click of a button. Monitor and provide insight into the behavior of the FakeRestAPI application that will be deployed and determine root causes by querying the application’s custom log files.
 
-
-
-### Introduction 
-In this project, Azure DevOps is used to build a CI/CD pipeline that create and deploy in infrastructure using terraform, Azure App service to host a website - FakeRestAPI.
-The automated test runs on a self-hosted test runner, a Linux Virtual machine is deployed to use to deploy the UI test with selenium, Integration test with postman and a stress test with Jmeter.
-
-![Structure](images/structure.PNG "structure")
+![Architecture](images_project3/architecture.JPG "Architecture")
 
 ### Project Dependencies
 - [Terraform](https://www.terraform.io/downloads.html): IaC
@@ -25,10 +18,14 @@ The automated test runs on a self-hosted test runner, a Linux Virtual machine is
 - [Azure Account](https://portal.azure.com) 
 - [Azure Command Line Interface](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 - [Azure DevOps Account](https://dev.azure.com/) 
+- [A disposable outlook account](https://outlook.live.com/)
 
 ### Implementation
 1. Download the Project Starter file or fork and clone the repository
 2. Open it in your preferred code editor (Using VS Code in my case)
+
+your File structure will look like this:
+![File Structure](images_project3/starter_code_tree_structure.JPG "File Structure")
 
 Login to your Azure account 
 
@@ -51,6 +48,7 @@ The output will look like this
   "password": "MYk8Q~GVc3G0~ZjyctMjOEiVIPImrcqgPimvGaQq",
   "tenant": "2202583d-31dc-43c2-9798-c28c0ffe2a4f"
 }
+
 ``` 
 
 Within the tarraform folder, run a bash script to create a backend storage account 
@@ -107,6 +105,9 @@ Choose you github repo. edit the azure-pipeline.yaml script. When you save and r
 - Deploy
 - Test
 
+![pipeline phases](images_project3/Pipeline-summary.JPG "pipeline build process")
+
+![pipelin jobs](images_project3/pipeline_jobs.JPG "pipeline jobs")
 
 ### Terrafrom apply
 
@@ -211,7 +212,6 @@ Go back to the App Service web page and navigate on the links and also generate 
 ```bash 
 https://project3demo-appservice.azurewebsites.net/uuuu
 
-https://project3demo-appservice.azurewebsites.net/first page
 ```
 After the trigger, check the email configured since an alert message will be received. 
 
